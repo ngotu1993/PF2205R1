@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="div1">
+        <p id="p1">Đoan van 1</p>
+        <p id="p2">Đoan van 2</p>
+        <button onclick="alert('Khong co gi')">Nhấp thử</button>
+    </div> -->
+
+    <select name="" id="cars" onchange="Car()">
+        <option value="honda">Honda</option>
+        <option value="yahama">Yamaha</option>
+        <option value="vario">Vario</option>
+        <option value="lead">Lead</option>
+    </select>
+
+</body>
+
+</html>
+
+<script>
+    function Car() {
+
+        let car = document.getElementById("cars").value;
+        alert("Ban dang chon: " + car);
+
+    }
+
+
+    // const p3 = document.createElement("p");
+    // p3.innerHTML = "Doan van 3";
+
+    // const div = document.getElementById("div1");
+    // const p1 = document.getElementById("p1");
+    // div.appendChild(p3);
+    // div.insertBefore(p3, p1);
+</script>

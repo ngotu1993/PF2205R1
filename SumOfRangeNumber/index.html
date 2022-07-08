@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="" id="num1" placeholder="Nhap so thu nhat: ">
+    <input type="number" name="" id="num2" placeholder="Nhap so thu hai: ">
+    <button onclick="SumOfRange()">Tinh Tong</button>
+    <p id="result">Tong 2 so la:</p>
+</body>
+
+</html>
+
+<script>
+    function SumOfRange() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let result = 0;
+        if (a > b) {
+            result = "Nhap lai";
+        } else {
+            for (var i = a; i <= b; i++) {
+                result += i;
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>

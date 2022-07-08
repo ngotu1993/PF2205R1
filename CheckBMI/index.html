@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="" id="height" placeholder="Nhap chieu cao "> <span>m</span><br>
+    <input type="number" name="" id="weight" placeholder="Nhap can nang: "> <span>kg</span><br>
+    <button onclick="BMI();">Check BMI</button>
+    <p id="result"></p>
+</body>
+
+</html>
+
+<script>
+    function BMI() {
+        let height = +document.getElementById("height").value;
+        let weight = +document.getElementById("weight").value;
+        let bmi = weight / (Math.pow(height, 2));
+        let result = "";
+        if (bmi < 16) {
+            result = "Gay do III ";
+        } else if (bmi < 17) {
+            result = "Gay do II";
+        } else if (bmi < 18.5) {
+            result = "Gay do I";
+        } else if (bmi < 25) {
+            result = "Binh thuon ";
+        } else if (bmi < 30) {
+            result = "Thua can";
+        } else if (bmi < 35) {
+            result = "Beo phi do I";
+        } else if (bmi < 40) {
+            result = "Beo phi do II";
+        } else {
+            result = "Beo phi độ II";
+        }
+    }
+    document.getElementById("result").innerHTML = result;
+</script>
