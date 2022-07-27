@@ -13,16 +13,19 @@
 </body>
 
 </html>
-
 <script>
-    var pass = prompt("Nhap password: ");
-    var i = 0;
-    if (pass == 12345) {
-        alert("MK dung");
+    function Check(x) {
+        if (typeof(x) === String) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    let x = prompt('Nhap bat ky: ');
+    if (Check(x) == true) {
+        alert('Day la ky tu');
     } else {
-        do {
-            i++;
-            pass = prompt("Nhap lai password: ");
-        } while (pass != 12345 && i <= 3);
+        alert('Day khong phai la ky tu')
     }
 </script>

@@ -13,16 +13,14 @@
 </body>
 
 </html>
-
 <script>
-    var pass = prompt("Nhap password: ");
-    var i = 0;
-    if (pass == 12345) {
-        alert("MK dung");
-    } else {
-        do {
-            i++;
-            pass = prompt("Nhap lai password: ");
-        } while (pass != 12345 && i <= 3);
+    function giaithua(x) {
+        if (x == 0) {
+            return 1;
+        } else {
+            return x * giaithua(x - 1);
+        }
     }
+    let x = +prompt('Nhap so giai thua: ');
+    alert(giaithua(x));
 </script>

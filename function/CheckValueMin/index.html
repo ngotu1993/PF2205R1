@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function checkValueMin(x, y, z) {
+        if (x > y && y > z) {
+            return x;
+        } else if (x < y && y > z) {
+            return y;
+        } else {
+            return z;
+        }
+    }
+
+    let num1 = +prompt('Nhap so thu nhat: ');
+    let num2 = +prompt('Nhap so thu hai: ');
+    let num3 = +prompt('Nhap so thu ba: ');
+    alert('So lon nhat trong 3 so la: ' + checkValueMin(num1, num2, num3))
+</script>

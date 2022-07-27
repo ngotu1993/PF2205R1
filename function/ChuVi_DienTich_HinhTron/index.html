@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Perimeter(r) {
+        let C = r * 2 * Math.PI;
+        return C;
+    }
+    let r = +prompt('Nhap ban kinh hinh tron: ')
+    alert('Chu vi hinh tron la: ' + Perimeter(r));
+
+    function Area(r) {
+        let S = Math.pow(r, 2) * Math.PI;
+        return S;
+    }
+    alert('Dien tich hinh tron la: ' + Area(r));
+</script>
