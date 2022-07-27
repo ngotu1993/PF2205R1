@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400px" height="400px" style="border: 1px solid;"></canvas>
+</body>
+
+</html>
+
+<script>
+    class Rectangle {
+        constructor(width, height, perimeter, area) {
+            this.width = width;
+            this.height = height;
+            this.perimeter = perimeter;
+            this.area = area;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+        getArea() {
+            return this.width * this.height;
+        }
+    }
+    let height = +prompt('Nhap chieu dai: ');
+    let width = +prompt('Nhap chieu rong:')
+    let rectangle = new Rectangle(width, height);
+    let w = rectangle.getWidth();
+    let h = rectangle.getHeight();
+    let Perimeter = rectangle.getPerimeter();
+    let Area = rectangle.getArea();
+
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.fillStyle = "red";
+    ctx.fillRect(100, 100, w, h)
+    ctx.stroke();
+
+    document.write("<br>" + "P = " + Perimeter + "; S = " + Area);
+</script>
