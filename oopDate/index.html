@@ -31,6 +31,23 @@
         getYear() {
             return this.year;
         }
+        setDay(day) {
+            this.day = day;
+        }
+        setMonth(month) {
+            this.month = month;
+        }
+        setYear(year) {
+            this.year = year;
+        }
+        setDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        toString() {
+            return this.day + "/" + this.month + "/" + this.year
+        }
     }
 
     let date = new MyDate(2, 2, 2007)
@@ -38,4 +55,6 @@
     let month = date.getMonth();
     let year = date.getYear();
     document.write(day + "/" + month + "/" + year);
+    MyDate(02, 02, 2022);
+    document.write(date.toString());
 </script>
